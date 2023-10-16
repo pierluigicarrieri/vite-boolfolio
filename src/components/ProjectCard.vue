@@ -6,6 +6,16 @@
 				type: Object,
                 required: true,
 			}
+		},
+
+		methods : {
+
+			getImgUrl(project) {
+
+				return `http://127.0.0.1:8000/storage/${project.image}`
+
+			}
+			
 		}
 
 	}
@@ -14,7 +24,7 @@
 <template>
 
 	<div class="card h-100">
-		<!-- <img src="{{asset('storage/' . $project->image)}}" class="card-img-top" alt=""> -->
+		<img :src="getImgUrl(project)" class="card-img-top" alt="">
 		<div class="card-body">
 			<h5 class="card-title">{{project.name}}</h5>
 			<p class="card-text">{{project.description}}</p>
