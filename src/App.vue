@@ -21,9 +21,9 @@ import ProjectCard from "./components/ProjectCard.vue"
 
     methods : {
 
-      fetchData() {
+      fetchData(url) {
 
-        axios.get('http://127.0.0.1:8000/api/projects').then((response) => {
+        axios.get(url ?? 'http://127.0.0.1:8000/api/projects').then((response) => {
           this.fetched_data = response.data.results.data;
           delete response.data.results.data;
           this.pagination_info = response.data.results;
@@ -42,7 +42,7 @@ import ProjectCard from "./components/ProjectCard.vue"
 
 <template>
 
-    <h1 class="py-3 text-center text-danger">Questa è l'app</h1>
+    <h1 class="py-5 text-center text-danger">Questa è la parte pubblica della mia app</h1>
 
     <div class="main">
 
@@ -56,6 +56,10 @@ import ProjectCard from "./components/ProjectCard.vue"
 
           </div>
 
+        </div>
+
+        <div class="d-flex justify-content-center py-4">
+          <a class="btn btn-link" v-for="linkToPage in pagination_info.links" @click="fetchData(linkToPage.url)" v-html="linkToPage.label"></a>
         </div>
 
       </div>

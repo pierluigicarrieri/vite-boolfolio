@@ -32,7 +32,9 @@
 		<ul class="list-group list-group-flush">
 			<li class="list-group-item">{{project.type.name}}</li>
 			<li class="list-group-item">{{project.publication_date}}</li>
-			<li class="list-group-item" v-for="technology in project.technologies" :key="technology.id" v-html="technology.icon"></li>
+			<li class="list-group-item d-flex">
+				<div class="pe-2" v-for="technology in project.technologies" :key="technology.id" v-html="technology.icon"></div>
+			</li>
 			<li class="list-group-item">
 				<a :href="project.git_link">{{project.git_link}}</a>
 			</li>
