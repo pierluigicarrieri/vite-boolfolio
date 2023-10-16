@@ -1,8 +1,6 @@
 <script>
 	export default {
 
-    
-
 	}
 </script>
 
@@ -10,6 +8,6 @@
     <h1>Ciao</h1>
 </template>
 
-<style>
+<style scoped>
 
 </style>
