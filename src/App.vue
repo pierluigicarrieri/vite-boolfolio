@@ -1,12 +1,14 @@
 <script>
 
 import axios from 'axios';
-import ProjectCard from "./components/ProjectCard.vue"
+import ProjectCard from "./components/ProjectCard.vue";
+import NavBar from "./components/Navbar.vue";
 
 	export default {
 
     components : {
-      ProjectCard
+      ProjectCard,
+      NavBar
     },
 
     data() {
@@ -41,6 +43,8 @@ import ProjectCard from "./components/ProjectCard.vue"
 </script>
 
 <template>
+
+    <NavBar></NavBar>
 
     <h1 class="py-5 text-center text-danger">Questa è la parte pubblica della mia app</h1>
 
