@@ -1,8 +1,13 @@
 <script>
 
 import axios from 'axios';
+import ProjectCard from "./components/ProjectCard.vue"
 
 	export default {
+
+    components : {
+      ProjectCard
+    },
 
     data() {
 
@@ -36,7 +41,27 @@ import axios from 'axios';
 </script>
 
 <template>
-    <h1>Ciao belli</h1>
+
+    <h1 class="py-3 text-center text-danger">Questa è l'app</h1>
+
+    <div class="main">
+
+      <div class="container">
+
+        <div class="row row-cols-2 g-4">
+
+          <div class="col" v-for="project in fetched_data" :key="project.id">
+
+            <ProjectCard :project="project"></ProjectCard>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
 </template>
 
 <style>
