@@ -1,43 +1,43 @@
 <script>
 
-import axios from 'axios';
-import ProjectCard from "./components/ProjectCard.vue";
+// import axios from 'axios';
+// import ProjectCard from "./components/ProjectCard.vue";
 import NavBar from "./components/Navbar.vue";
 
 	export default {
 
     components : {
-      ProjectCard,
+      // ProjectCard,
       NavBar
     },
 
-    data() {
+    // data() {
 
-      return {
+    //   return {
 
-        fetched_data : [],
-        pagination_info : {},
-      }
+    //     fetched_data : [],
+    //     pagination_info : {},
+    //   }
 
-    },
+    // },
 
-    methods : {
+    // methods : {
 
-      fetchData(url) {
+    //   fetchData(url) {
 
-        axios.get(url ?? 'http://127.0.0.1:8000/api/projects').then((response) => {
-          this.fetched_data = response.data.results.data;
-          delete response.data.results.data;
-          this.pagination_info = response.data.results;
-        });
+    //     axios.get(url ?? 'http://127.0.0.1:8000/api/projects').then((response) => {
+    //       this.fetched_data = response.data.results.data;
+    //       delete response.data.results.data;
+    //       this.pagination_info = response.data.results;
+    //     });
 
-      },
+    //   },
 
-    },
+    // },
 
-    mounted() {
-      this.fetchData()
-    }
+    // mounted() {
+    //   this.fetchData()
+    // }
 
 	}
 </script>
@@ -46,7 +46,9 @@ import NavBar from "./components/Navbar.vue";
 
     <NavBar></NavBar>
 
-    <h1 class="py-5 text-center text-danger">Questa è la parte pubblica della mia app</h1>
+    <router-view></router-view>
+
+    <!-- <h1 class="py-5 text-center text-danger">Questa è la parte pubblica della mia app</h1>
 
     <div class="main">
 
@@ -68,7 +70,7 @@ import NavBar from "./components/Navbar.vue";
 
       </div>
 
-    </div>
+    </div> -->
 
 </template>
 

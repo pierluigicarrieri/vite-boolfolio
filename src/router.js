@@ -16,7 +16,7 @@ const routes = [
         component: ProjectsPage //Component to return page's html
     },
     {
-        path: "/projects/:id", //Uri to write in browser's searchbar
+        path: "/projects/:slug", //Uri to write in browser's searchbar
         name: "projects.show", //Name of route for creating links
         component: ProjectPage //Component to return page's html
     }
