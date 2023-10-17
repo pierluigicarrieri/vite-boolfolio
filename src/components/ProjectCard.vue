@@ -39,6 +39,9 @@
 				<a :href="project.git_link">{{project.git_link}}</a>
 			</li>
 		</ul>
+		<div class="card-footer">
+			<router-link :to="{name:'projects.show', params: {slug: project.slug}}">Project Details</router-link>
+		</div>
     </div>
 
 </template>
