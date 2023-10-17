@@ -47,7 +47,7 @@ import ProjectCard from "/src/components/ProjectCard.vue";
 
 		<div class="container">
 
-			<h1 class="py-5 text-center text-danger">Questa è la parte pubblica della mia app</h1>
+			<h1 class="py-5 text-center text-danger">This is the App's public part where all the projects are shown</h1>
 
 			<div class="row row-cols-2 g-4">
 

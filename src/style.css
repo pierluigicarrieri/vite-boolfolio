@@ -5,7 +5,7 @@ ul {
     list-style: none;
 }
 
-a {
+a, router-link {
     text-decoration: none;
 }
 
