@@ -12,7 +12,7 @@ const routes = [
     },
     {
         path: "/projects", //Uri to write in browser's searchbar
-        name: "index", //Name of route for creating links
+        name: "projects.index", //Name of route for creating links
         component: ProjectsPage //Component to return page's html
     },
     {
