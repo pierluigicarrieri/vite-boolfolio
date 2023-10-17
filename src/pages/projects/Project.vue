@@ -7,7 +7,6 @@ import axios from 'axios';
 		data() {
 			return {
 				project: {},
-				ciao: 0
 			}
 		},
 
@@ -15,7 +14,7 @@ import axios from 'axios';
 
 			fetchData() {
 
-				axios.get('http://localhost:8000/api/projects/' + this.$route.params.slug).then((response) => {
+				axios.get('http://127.0.0.1:8000/api/projects/' + this.$route.params.slug).then((response) => {
 				this.project = response.data;
 				});
 
@@ -31,7 +30,6 @@ import axios from 'axios';
 			
 		mounted() {
 			this.fetchData()
-			console.log(this.project);
 		}
 	
 	}
@@ -40,11 +38,11 @@ import axios from 'axios';
 
 <template>
 
-	<!-- <main>
+	<main>
 
 		<div class="container">
 
-			<h1 class="py-5 text-center text-danger">This is the App's Siongle Project Page</h1>
+			<h1 class="py-5 text-center text-danger">This is the App's Single Project Page</h1>
 
 			<div class="card h-100">
 				<img :src="getImgUrl(project)" class="card-img-top" alt="">
@@ -66,7 +64,7 @@ import axios from 'axios';
 
 		</div>
 
-	</main> -->
+	</main>
 
 </template>
 
