@@ -3,11 +3,13 @@
 
 body {
 
+    height: 100vh;
+
     background-image: url('/public/eminence_grise.jpg');
-
+    
     background-size: cover;
-
-}
+    
+    }
 
 ul {
     list-style: none;

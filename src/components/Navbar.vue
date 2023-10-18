@@ -31,7 +31,7 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto d-flex align-items-center">
                     <!-- Authentication Links -->
                     <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:8000/login">Login</a>
@@ -65,11 +65,16 @@ nav:hover {
 }
 
 .nav-link {
+    font-size: 1rem;
     color: #FFFFFF;
+    transition: 1s;
 }
 
 .nav-link:hover {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #EE3B2E;
+    transition: 1s;
 }
 
 </style>

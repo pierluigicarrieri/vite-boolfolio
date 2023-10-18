@@ -13,7 +13,12 @@
 			<h1 class="mt-5">Welcome</h1>
 
 			<!-- Only 1 h3 to better (?) manage parent's hover effect -->
-			<h3 class="text-center">to my developer portfolio, weary traveller. <br> Enjoy your stay</h3>
+			<h3 class="text-center pb-5">to my developer portfolio, weary traveller. <br> Enjoy your stay</h3>
+
+			<button type="button" class="btn btn-lg btn-outline-danger mb-5">
+				<router-link class="nav-link" :to="{name:'projects.index'}">View Projects</router-link>
+			</button>
+			
 
 		</div>
 
@@ -23,17 +28,15 @@
 
 <style scoped>
 
-/* Styling and transitions for title in homepage (on hover).
-'Pointer events' mechanism allow effect on parent when hovering 
-child ('auto' on child 'none' on parent) */
+/* Styling and transitions for title in homepage (on hover)*/
+
 h1 {
 	font-size: 4rem;
-	transition: 1s;
 	color: #FFFFFF;
-	pointer-events: auto;
+	transition: 1s;
 }
 
-h1:hover {
+main:hover h1 {
 	font-size: 6rem;
 	color: #EE3B2E;
 	box-shadow: 10px;
@@ -41,12 +44,12 @@ h1:hover {
 }
 
 h3 {
-	transition: 1s;
 	color: #FFFFFF;
 	opacity: 0;
+	transition: 1s;
 }
 
-h1:hover + h3 {
+main:hover h3 {
 	font-size: 3rem;
 	color: #EE3B2E;
 	opacity: 1;
@@ -54,8 +57,12 @@ h1:hover + h3 {
 	transition: 1s;
 }
 
-main {
-	pointer-events: none;
+button {
+	opacity: 0;
+}
+
+main:hover button {
+	opacity: 1;
 }
 
 main:hover {
