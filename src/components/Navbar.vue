@@ -6,7 +6,7 @@
 
 <template>
     
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="https://laravel.com">
                 <h3 id="powered-by" class="pt-1 pe-2">Powered by </h3>
@@ -49,8 +49,26 @@
 
 <style scoped>
 
-#powered-by {
+nav {
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.7s;
+}
 
+nav:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+    }
+
+#powered-by {
+    color: #EE3B2E;
+}
+
+.nav-link {
+    color: #FFFFFF;
+}
+
+.nav-link:hover {
     color: #EE3B2E;
 }
 

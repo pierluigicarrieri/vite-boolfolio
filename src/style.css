@@ -1,6 +1,14 @@
 @import "bootstrap";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
+body {
+
+    background-image: url('/public/eminence_grise.jpg');
+
+    background-size: cover;
+
+}
+
 ul {
     list-style: none;
 }
