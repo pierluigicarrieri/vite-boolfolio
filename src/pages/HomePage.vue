@@ -10,7 +10,7 @@
 
 		<div class="container d-flex flex-column justify-content-center align-items-center pt-5">
 
-			<h1 class="mt-5">Welcome</h1>
+			<h1 class="mt-5">Welcome...</h1>
 
 			<!-- Only 1 h3 to better (?) manage parent's hover effect -->
 			<h3 class="text-center pb-5">to my developer portfolio, weary traveller. <br> Enjoy your stay</h3>
@@ -63,6 +63,11 @@ button {
 
 main:hover button {
 	opacity: 1;
+}
+
+main {
+	background-color: rgba(0, 0, 0, 0);
+	transition: 1s;
 }
 
 main:hover {

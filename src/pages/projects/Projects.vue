@@ -1,13 +1,13 @@
 <script>
 
 import axios from 'axios';
-import ProjectCard from "/src/components/ProjectCard.vue";
+import ProjectComponent from "/src/components/ProjectComponent.vue";
 
 	export default {
 
 		components : {
 
-			ProjectCard,
+			ProjectComponent,
     },
 
 		data() {
@@ -47,23 +47,21 @@ import ProjectCard from "/src/components/ProjectCard.vue";
 
 		<div class="container">
 
-			<h1 class="py-5 text-center text-danger">This is the App's public part where all the projects are shown</h1>
-
-			<div class="row row-cols-2 g-4">
+			<div class="row row-cols-3 g-5 my-5 py-5">
 
 				<div class="col" v-for="project in fetched_data" :key="project.id">
 
-					<ProjectCard :project="project"></ProjectCard>
+					<ProjectComponent :project="project"></ProjectComponent>
 
 				</div>
 
 			</div>
 
-			<div class="d-flex justify-content-center py-4">
+		</div>
 
-				<a class="btn btn-link" v-for="linkToPage in pagination_info.links" @click="fetchData(linkToPage.url)" v-html="linkToPage.label"></a>
-		
-			</div>
+		<div class="btn-container d-flex justify-content-center py-4">
+
+			<a class="btn btn-outline-danger mx-2" v-for="linkToPage in pagination_info.links" @click="fetchData(linkToPage.url)" v-html="linkToPage.label"></a>
 
 		</div>
 
@@ -71,8 +69,15 @@ import ProjectCard from "/src/components/ProjectCard.vue";
 
 </template>
 
-
-
 <style scoped>
+
+.btn-container {
+	background-color: rgba(0, 0, 0, 0);
+	transition: 1s;
+}
+.btn-container:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: 1s;
+}
 
 </style>
